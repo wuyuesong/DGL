@@ -115,7 +115,7 @@ def main():
                       optimizer_params=optimizer_params,
                       trainer_params=trainer_params,)
 
-    copy_all_src(trainer.result_folder)
+    copy_all_src(trainer.result_folder, os.path.dirname(os.path.abspath(__file__)))
 
     trainer.run()
 

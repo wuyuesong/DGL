@@ -10,8 +10,8 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, "..")
 sys.path.insert(0, "../..")
 import logging
-from DAIN.utils.utils import create_logger, copy_all_src, cvrplib_collections, parse_cvrplib_name, load_cvrplib_file, get_dist_matrix, normalize_nodes_to_unit_board, choose_bsz, calculate_tour_length_by_dist_matrix, avg_list
-from DAIN.CVRP.CVRPTester_cvrplib import CVRPTester as Tester
+from DGL.utils.utils import create_logger, copy_all_src, cvrplib_collections, parse_cvrplib_name, load_cvrplib_file, get_dist_matrix, normalize_nodes_to_unit_board, choose_bsz, calculate_tour_length_by_dist_matrix, avg_list
+from DGL.CVRP.CVRPTester_cvrplib import CVRPTester as Tester
 from pathlib import Path
 import time
 import torch

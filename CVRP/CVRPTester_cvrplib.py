@@ -5,13 +5,13 @@ import torch
 from torch.optim import Adam as Optimizer
 from torch.optim.lr_scheduler import MultiStepLR as Scheduler
 
-from DAIN.CVRP.CVRPModel import CVRPModel as Model
-from DAIN.CVRP.CVRPEnv import CVRPEnv as Env
-from DAIN.utils.utils import *
-from DAIN.utils.beamsearch import Beamsearch
+from DGL.CVRP.CVRPModel import CVRPModel as Model
+from DGL.CVRP.CVRPEnv import CVRPEnv as Env
+from DGL.utils.utils import *
+from DGL.utils.beamsearch import Beamsearch
 import random
 import numpy as np
-from torch_cluster import knn
+# from torch_cluster import knn
 
 import time
 

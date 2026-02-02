@@ -10,8 +10,8 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, "..")
 sys.path.insert(0, "../..")
 import logging
-from DAIN.utils.utils import create_logger, copy_all_src
-from DAIN.TSP.TSPTrainer import TSPTrainer as Trainer
+from DGL.utils.utils import create_logger, copy_all_src
+from DGL.TSP.TSPTrainer import TSPTrainer as Trainer
 
 
 ##########################################################################################
@@ -116,7 +116,7 @@ def main():
                       optimizer_params=optimizer_params,
                       trainer_params=trainer_params,)
 
-    copy_all_src(trainer.result_folder)
+    copy_all_src(trainer.result_folder, os.path.dirname(os.path.abspath(__file__)))
 
     trainer.run()
 

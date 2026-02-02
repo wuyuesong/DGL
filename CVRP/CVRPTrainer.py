@@ -11,7 +11,7 @@ from new_version.CVRP.CVRPModel import CVRPModel as Model
 from new_version.CVRP.CVRPEnv import CVRPEnv as Env
 from new_version.utils.utils import *
 from new_version.utils.beamsearch import Beamsearch
-from torch_cluster import knn
+# from torch_cluster import knn
 
  
 

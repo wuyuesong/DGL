@@ -5,11 +5,11 @@ import torch
 from torch.optim import Adam as Optimizer
 from torch.optim.lr_scheduler import MultiStepLR as Scheduler
 
-from DAIN.TSP.TSPModel import TSPModel as Model
+from DGL.TSP.TSPModel import TSPModel as Model
 # from LEHD_modify2.TSP.test import main_test
-from DAIN.TSP.TSPEnv import TSPEnv as Env
-from DAIN.utils.utils import *
-from DAIN.utils.beamsearch import Beamsearch
+from DGL.TSP.TSPEnv import TSPEnv as Env
+from DGL.utils.utils import *
+from DGL.utils.beamsearch import Beamsearch
 import random
 import numpy as np
 

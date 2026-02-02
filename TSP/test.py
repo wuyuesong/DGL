@@ -10,8 +10,8 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, "..")
 sys.path.insert(0, "../..")
 import logging
-from DAIN.utils.utils import create_logger, copy_all_src
-from DAIN.TSP.TSPTester import TSPTester as Tester
+from DGL.utils.utils import create_logger, copy_all_src
+from DGL.TSP.TSPTester import TSPTester as Tester
 import time 
 
 
@@ -185,7 +185,7 @@ def main():
                             tester_params=tester_params,
                             valid_params=valid_params)
 
-            copy_all_src(trainer.result_folder)
+            copy_all_src(trainer.result_folder, os.path.dirname(os.path.abspath(__file__)))
 
             start_time = time.time()
 

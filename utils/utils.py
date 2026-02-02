@@ -766,7 +766,11 @@ def copy_all_src(dst_root, src_path):
 
                     dst_filepath = filepath.format(post_index)
 
-                shutil.copy(src_abspath, dst_filepath)
+                if os.path.exists(src_abspath):
+                    shutil.copy(src_abspath, dst_filepath)
+                else:
+                    print(f"Warning: Source file does not exist, skipping: {src_abspath}")
+
 
 
 def tour_nodes_to_tour_len(nodes, W_values):

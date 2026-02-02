@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch_cluster import knn
+# from torch_cluster import knn
 import numpy as np
 import matplotlib.pyplot as plt
 import os

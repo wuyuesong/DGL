@@ -11,7 +11,7 @@ from new_version.utils.utils import *
 from new_version.utils.beamsearch import Beamsearch
 import random
 import numpy as np
-from torch_cluster import knn
+# from torch_cluster import knn
 
 import time
 

@@ -11,8 +11,8 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, "..")
 sys.path.insert(0, "../..")
 import logging
-from DAIN.utils.utils import create_logger, copy_all_src, tsplib_collections, parse_tsplib_name, load_tsplib_file, normalize_nodes_to_unit_board, choose_bsz, calculate_tour_length_by_dist_matrix, get_dist_matrix, avg_list
-from DAIN.TSP.TSPTester_tsplib import TSPTester as Tester
+from DGL.utils.utils import create_logger, copy_all_src, tsplib_collections, parse_tsplib_name, load_tsplib_file, normalize_nodes_to_unit_board, choose_bsz, calculate_tour_length_by_dist_matrix, get_dist_matrix, avg_list
+from DGL.TSP.TSPTester_tsplib import TSPTester as Tester
 import time 
 import math
 from pathlib import Path

@@ -179,7 +179,7 @@ def main():
                             tester_params=tester_params,
                             valid_params=valid_params)
 
-            copy_all_src(trainer.result_folder)
+            copy_all_src(trainer.result_folder, os.path.dirname(os.path.abspath(__file__)))
 
             start_time = time.time()
 
