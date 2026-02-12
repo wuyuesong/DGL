@@ -187,10 +187,10 @@ class TSPTester:
 
         shortest_lens, index = torch.min(view_reward, dim=1)
 
-        if self.tester_params["test_mode"] == "aug_test":
-            shortest_tours = torch.gather(self.env.selected_node_list.view(self.env.batch_size//self.env.aug_size,beam_size*self.env.pomo_size*self.env.aug_size,-1), 1, index[:,None].unsqueeze(1).expand(self.env.batch_size//self.env.aug_size,1,num_nodes-1)).squeeze(1)
-        else:
-            shortest_tours = torch.gather(self.env.selected_node_list.view(self.env.batch_size,beam_size*self.env.pomo_size,-1), 1, index[:,None].unsqueeze(1).expand(self.env.batch_size,1,num_nodes-1)).squeeze(1)
+        # if self.tester_params["test_mode"] == "aug_test":
+        #     shortest_tours = torch.gather(self.env.selected_node_list.view(self.env.batch_size//self.env.aug_size,beam_size*self.env.pomo_size*self.env.aug_size,-1), 1, index[:,None].unsqueeze(1).expand(self.env.batch_size//self.env.aug_size,1,num_nodes)).squeeze(1)
+        # else:
+        #     shortest_tours = torch.gather(self.env.selected_node_list.view(self.env.batch_size,beam_size*self.env.pomo_size,-1), 1, index[:,None].unsqueeze(1).expand(self.env.batch_size,1,num_nodes)).squeeze(1)
 
 
         score = shortest_lens.mean()

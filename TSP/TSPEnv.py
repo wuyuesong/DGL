@@ -505,7 +505,7 @@ class TSPEnv:
         done = (self.selected_count == self.problems.shape[1])
 
         if done:
-            if self.env_params['test_mode'] == "aug_test":
+            if self.mode == "test" and self.env_params['test_mode'] == "aug_test":
                 reward = self._get_travel_distance(self.problems[:,:,:2].repeat_interleave(self.beam_size, dim=0))
             else:
                 reward = self._get_travel_distance(self.step_state.data[:,:,:2])
